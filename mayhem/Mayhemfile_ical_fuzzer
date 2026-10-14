@@ -1,0 +1,11 @@
+project: savantenvs/icalendar
+target: ical-fuzzer-mined-2ab24a6
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ical-fuzzer-mined-2ab24a6/testsuite
+
+cmds:
+  - cmd: /mayhem/ical_fuzzer
+    libfuzzer: true
+    timeout: 12
+    max_length: 32768

@@ -1,0 +1,8 @@
+{
+  "spec_version": 2,
+  "upstream_default_branch": "main",
+  "lang": "python",
+  "fuzz_engine": "atheris",
+  "oss_fuzz": true,
+  "notes": "Pure-Python Atheris harnesses. Mayhem targets are thin ELF launchers (mayhem/launcher.c) that exec python3 on the harness, because Mayhem requires an ELF target. One target: ical-fuzzer (the upstream OSS-Fuzz harness plus repr() of each parsed calendar, mayhem/ical_fuzzer_repr.py). The behavioral oracle (mayhem/icalendar_oracle) is likewise an ELF launcher so the anti-reward-hack sabotage check can neuter it."
+}
